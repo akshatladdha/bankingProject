@@ -1,0 +1,20 @@
+<div class="content-wrapper" style = "display: flex; justify-content: center; text-align: center;">
+
+    <div class="card" style="width: 50%">
+        <img class="card-img-top" src="../assets/img/sendmoney.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h3>Send Money from <b>{{fromCustName}}</b> -----> <b>{{toCustName}}</b></h3>
+            <h5 class="card-title">Enter Amount</h5>
+            <input type="number" class="form-control" id="exampleInputPassword1" [(ngModel)] = "amount"><br>
+            <button type="button" class="btn btn-primary"
+                                    (click)="sendMoney()">Send Money</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf = "check">
+    Transaction Successful
+</div>
+<div *ngIf != "check">
+    Transaction Unsuccessful
+</div>
